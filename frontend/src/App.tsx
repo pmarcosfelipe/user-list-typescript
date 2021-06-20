@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import api from './services/api';
 
+import User from './components/User';
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -23,7 +25,7 @@ function App() {
       <header>
         <img src={logo} className="App-logo" alt="logo" />
         {users.map((user, index) => (
-          <p key={index}>{user.name}</p>
+          <User key={index} user={user} />
         ))}
       </header>
     </div>
